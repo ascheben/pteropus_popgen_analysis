@@ -1,0 +1,2 @@
+lognormal(0,1.26,0.1)	crown	BFF,GHFF,SFF,IBFF
+monophyletic	NA	BFF,GHFF,SFF,IBFF

@@ -1,0 +1,243 @@
+Sample	Species	Sample Identifier	Date collected	Roost	Region	Country	BFF_SFF_Population_ID	Latitude	Longitude	Weight	Age	Sex	Type	Source
+1304001	SFF	1304001_SFF	08.04.2013	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	851	Adult	F	Wing punch	CSIRO
+1304004	SFF	1304004_SFF	08.04.2013	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	730	Adult	F	Wing punch	CSIRO
+1304006	SFF	1304006_SFF	08.04.2013	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	880	Adult	M	Wing punch	CSIRO
+1304010	SFF	1304010_SFF	16.04.2013	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	830	Adult	M	Wing punch	CSIRO
+1304011	SFF	1304011_SFF	17.04.2013	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	790	Adult	M	Wing punch	CSIRO
+1306001	GHFF	1306001_SFF	04.06.2013	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	707	Adult	M	Wing punch	CSIRO
+1306008	LRFF	1306008_SFF	07.06.2013	Tolga	Wet tropics	Australia	NA	-17.2315	145.48	839	Adult	M	Wing punch	CSIRO
+1306009	SFF	1306009_SFF	07.06.2013	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	813	Adult	F	Wing punch	CSIRO
+1306011	SFF	1306011_SFF	07.06.2013	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	721	Adult	F	Wing punch	CSIRO
+1306014	SFF	1306014_SFF	07.06.2013	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	910	Adult	M	Wing punch	CSIRO
+1306015	BFF	1306015_BFF	07.06.2013	Tolga	Wet tropics	Australia	NQ	-17.2315	145.48	861	Adult	M	Wing punch	CSIRO
+1307003	SFF	1307003_SFF	11.07.2013	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	817	Adult	M	Wing punch	CSIRO
+1307004	SFF	1307004_SFF	15.07.2013	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	797	Adult	M	Wing punch	CSIRO
+1402001	GHFF	1402001_GHFF	24.02.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	929	Adult	M	Wing punch	CSIRO
+1402002	GHFF	1402002_GHFF	24.02.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	839	Adult	M	Wing punch	CSIRO
+1402003	GHFF	1402003_GHFF	24.02.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	795	Adult	F	Wing punch	CSIRO
+1402004	GHFF	1402004_GHFF	24.02.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	762	Adult	F	Wing punch	CSIRO
+1404164	GHFF	1404164_GHFF	16.04.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	620	Adult	F	Wing punch	CSIRO
+1404168	GHFF	1404168_GHFF	16.04.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	690	Adult	M	Wing punch	CSIRO
+1404169	GHFF	1404169_GHFF	16.04.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	825	Adult	M	Wing punch	CSIRO
+1404171	GHFF	1404171_GHFF	17.04.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	700	Adult	M	Wing punch	CSIRO
+1405053	GHFF	1405053_GHFF	05.05.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	688	Adult	M	Wing punch	CSIRO
+1405054	GHFF	1405054_GHFF	05.05.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	688	Adult	M	Wing punch	CSIRO
+1405056	GHFF	1405056_GHFF	05.05.2014	Canungra	Qld	Australia	NA	-28.0395	153.182	664	Adult	M	Wing punch	CSIRO
+1409001	SFF	1409001_SFF	09.09.2014	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	813	Adult	M	Wing punch	CSIRO
+1409002	SFF	1409002_SFF	09.09.2014	Tolga	Wet tropics	Australia	Wet_tropics	-17.2315	145.48	685	Adult	M	Wing punch	CSIRO
+1409003	LRFF	1409003_LRFF	09.09.2014	Tolga	Wet tropics	Australia	NA	-17.2315	145.48	623		M	Wing punch	CSIRO
+1409004	LRFF	1409004_LRFF	09.09.2014	Tolga	Wet tropics	Australia	NA	-17.2315	145.48	603		M	Wing punch	CSIRO
+1409005	LRFF	1409005_LRFF	09.09.2014	Tolga	Wet tropics	Australia	NA	-17.2315	145.48	517		M	Wing punch	CSIRO
+1409006	LRFF	1409006_LRFF	09.09.2014	Tolga	Wet tropics	Australia	NA	-17.2315	145.48	635		M	Wing punch	CSIRO
+1409007	SFF	1409007_SFF	10.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	826	Adult	M	Wing punch	CSIRO
+1409008	SFF	1409008_SFF	10.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	735	Adult	F	Wing punch	CSIRO
+1409009	SFF	1409009_SFF	10.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	852	Adult	M	Wing punch	CSIRO
+1409012	SFF	1409012_SFF	10.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	826	Adult	F	Wing punch	CSIRO
+1409013	SFF	1409013_SFF	12.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	861	Adult	M	Wing punch	CSIRO
+1409026	SFF	1409026_SFF	16.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	730	Adult	F	Wing punch	CSIRO
+1409027	SFF	1409027_SFF	16.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	713	Adult	M	Wing punch	CSIRO
+1409030	SFF	1409030_SFF	16.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	756	Adult	M	Wing punch	CSIRO
+1409031	SFF	1409031_SFF	16.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	714	Adult	F	Wing punch	CSIRO
+1409032	SFF	1409032_SFF	16.09.2014	Gordonvale	Wet tropics	Australia	Wet_tropics	-17.1089	145.775	790	Adult	F	Wing punch	CSIRO
+1410001	SFF	1410001_SFF	20.10.2014	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	657	Adult	F	Wing punch	CSIRO
+1410002	SFF	1410002_SFF	20.10.2014	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	736	Adult	F	Wing punch	CSIRO
+1412001	BFF	1412001_BFF	16.12.2014	Canungra	Qld	Australia	E_COAST	-28.0395	153.182	824	Adult	M	Wing punch	CSIRO
+1412002	BFF	1412002_BFF	16.12.2014	Canungra	Qld	Australia	E_COAST	-28.0395	153.182	670	Adult	F	Wing punch	CSIRO
+1412006	BFF	1412006_BFF	16.12.2014	Canungra	Qld	Australia	E_COAST	-28.0395	153.182			F	Wing punch	CSIRO
+1412010	BFF	1412010_BFF	16.12.2014	Canungra	Qld	Australia	E_COAST	-28.0395	153.182	929	Adult	M	Wing punch	CSIRO
+1412014	BFF	1412014_BFF	16.12.2014	Canungra	Qld	Australia	E_COAST	-28.0395	153.182			F	Wing punch	CSIRO
+1412024	BFF	1412024_BFF	16.12.2014	Canungra	Qld	Australia	E_COAST	-28.0395	153.182	645	Adult	M	Wing punch	CSIRO
+1510003	SFF	1510003_SFF	20.10.2014	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	593	Adult	F	Wing punch	CSIRO
+1510004	SFF	1510004_SFF	20.10.2014	Pt Douglas	Wet tropics	Australia	Wet_tropics	-16.4889	145.463	785	Adult	M	Wing punch	CSIRO
+1510006	LRFF	1510006_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	515		M	Wing punch	CSIRO
+1510007	LRFF	1510007_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	483		M	Wing punch	CSIRO
+1510008	LRFF	1510008_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	488		M	Wing punch	CSIRO
+1510009	LRFF	1510009_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	430		M	Wing punch	CSIRO
+1510010	LRFF	1510010_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	516		M	Wing punch	CSIRO
+1510011	LRFF	1510011_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	475		M	Wing punch	CSIRO
+1510012	LRFF	1510012_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	501		M	Wing punch	CSIRO
+1510013	LRFF	1510013_LRFF	20.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	472		M	Wing punch	CSIRO
+1510019	GHFF	1510019_LRFF		Pt Douglas 	Wet tropics	Australia	NA	-16.4889	145.463					
+1610001	BFF	1610001_BFF	20.10.2016	Katherine	NT	Australia	N_AUS	-14.4725	132.257	413	Sub-adult	M	Wing punch	CSIRO
+1610002	BFF	1610002_BFF	21.10.2016	Katherine	NT	Australia	N_AUS	-14.4725	132.257	581	Adult	F	Wing punch	CSIRO
+1610003	LRFF	1610003_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257	405		F	Wing punch	CSIRO
+1610004	LRFF	1610004_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			m	Wing punch	CSIRO
+1610005	LRFF	1610005_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			M	Wing punch	CSIRO
+1610006	LRFF	1610006_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			m	Wing punch	CSIRO
+1610007	LRFF	1610007_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			m	Wing punch	CSIRO
+1610008	LRFF	1610008_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			m	Dried wing	CSIRO
+1610009	LRFF	1610009_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			m	Wing punch	CSIRO
+1610010	LRFF	1610010_LRFF	21.10.2016	Katherine	NT	Australia	NA	-14.4725	132.257			m	Wing punch	CSIRO
+1610012	BFF	1610012_BFF	21.10.2016	Katherine	NT	Australia	N_AUS	-14.4725	132.257	700	Adult	m	Wing punch	CSIRO
+1610013	BFF	1610013_BFF	21.10.2016	Katherine	NT	Australia	N_AUS	-14.4725	132.257	529	Adult	F	Wing punch	CSIRO
+1610015	BFF	1610015_BFF	22.10.2016	Katherine	NT	Australia	N_AUS	-14.4725	132.257	842	Adult	m	Wing punch	CSIRO
+1610016	BFF	1610016_BFF	22.10.2016	Katherine	NT	Australia	N_AUS	-14.4725	132.257	570	Adult	f	Wing punch	CSIRO
+1610017	BFF	1610017_BFF	22.10.2016		Manton Dam	Australia	N_AUS	-12.89	131.14			F	Dried wing	CSIRO
+1610021	LRFF	1610021_LRFF	22.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	480		M	Wing punch	CSIRO
+1610022	LRFF	1610022_LRFF	22.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	528		M	Wing punch	CSIRO
+1610024	LRFF	1610024_LRFF	22.10.2014	Pt Douglas	Wet tropics	Australia	NA	-16.4889	145.463	499		M	Wing punch	CSIRO
+1611011	BFF	1611011_BFF	18.11.2016	Rockhampton	Qld	Australia	E_COAST	-23.3979	150.49		Adult	F	Wing punch	Rocky bat carer
+1611012	BFF	1611012_BFF	18.11.2016	Rockhampton	Qld	Australia	E_COAST	-23.3979	150.49		Adult	F	Wing punch	Rocky bat carer
+1611013	BFF	1611013_BFF	18.11.2016	Rockhampton	Qld	Australia	E_COAST	-23.3979	150.49		Adult	F	Wing punch	Rocky bat carer
+1611014	GHFF	1611014_GHFF	20.11.2016	MacLean	NSW	Australia	NA	-29.4664	153.204		Juv		Wing punch	CSIRO
+1611016	GHFF	1611016_GHFF	20.11.2016	MacLean	NSW	Australia	NA	-29.4664	153.204		Juv		Wing punch	CSIRO
+1611017	GHFF	1611017_GHFF	20.11.2016	MacLean	NSW	Australia	NA	-29.4664	153.204		Juv		Wing punch	CSIRO
+1611018	GHFF	1611018_GHFF	20.11.2016	MacLean	NSW	Australia	NA	-29.4664	153.204		Juv		Wing punch	CSIRO
+1611019	GHFF	1611019_GHFF	21.11.2016	Bellingen	NSW	Australia	NA	-30.448	152.896		Juv		Wing punch	CSIRO
+1611020	GHFF	1611020_GHFF	21.11.2016	Bellingen	NSW	Australia	NA	-30.448	152.896		Juv		Wing punch	CSIRO
+1611022	GHFF	1611022_GHFF	21.11.2016	Pt Macquarie	NSW	Australia	NA	-31.4364	152.907		Juv		Wing punch	CSIRO
+1611023	GHFF	1611023_GHFF	21.11.2016	Pt Macquarie	NSW	Australia	NA	-31.4364	152.907		Juv		Wing punch	CSIRO
+1611024	GHFF	1611024_GHFF	21.11.2016	Pt Macquarie	NSW	Australia	NA	-31.4364	152.907		Juv		Wing punch	CSIRO
+1611025	GHFF	1611025_GHFF	21.11.2016	Pt Macquarie	NSW	Australia	NA	-31.4364	152.907		Juv		Wing punch	CSIRO
+1611026	GHFF	1611026_GHFF	21.11.2016	Pt Macquarie	NSW	Australia	NA	-31.4364	152.907		Juv		Wing punch	CSIRO
+1611027	GHFF	1611027_GHFF	21.11.2016	Wingham	NSW	Australia	NA	-31.8696	152.381		Juv		Wing punch	CSIRO
+1611028	GHFF	1611028_GHFF	21.11.2016	Wingham	NSW	Australia	NA	-31.8696	152.381		Juv		Wing punch	CSIRO
+1611029	GHFF	1611029_GHFF	21.11.2016	Wingham	NSW	Australia	NA	-31.8696	152.381		Juv		Wing punch	CSIRO
+1611030	GHFF	1611030_GHFF	21.11.2016	Wingham	NSW	Australia	NA	-31.8696	152.381		Juv		Wing punch	CSIRO
+1611031	GHFF	1611031_GHFF	21.11.2016	Wingham	NSW	Australia	NA	-31.8696	152.381		Juv		Wing punch	CSIRO
+1611032	BFF	1611032_BFF	23.11.2016	Lismore	NSW	Australia	E_COAST	-28.8102	153.296		Juv		Wing punch	CSIRO
+1611033	GHFF	1611033_GHFF	23.11.2016	Lismore	NSW	Australia	NA	-28.8102	153.296		Juv		Wing punch	CSIRO
+1611034	GHFF	1611034_GHFF	23.11.2016	Lismore	NSW	Australia	NA	-28.8102	153.296		Juv		Wing punch	CSIRO
+1611038	GHFF	1611038_GHFF	23.11.2016	Bundgeam	NSW	Australia	NA	-28.4383	152.88		Juv		Wing punch	CSIRO
+1611039	LRFF	1611039_GHFF	23.11.2016	Bundgeam	NSW	Australia	NA	-28.4383	152.88		Juv		Wing punch	CSIRO
+1611041	GHFF	1611041_GHFF	23.11.2016	Kyogle	NSW	Australia	NA	-28.6135	153.003		Juv		Wing punch	CSIRO
+1611042	GHFF	1611042_GHFF	23.11.2016	Kyogle	NSW	Australia	NA	-28.6135	153.003		Juv		Wing punch	CSIRO
+1612003	LRFF	1612003_LRFF	14.12.2016	Charters	Qld	Australia	NA	-20.0734	146.261	441	Adult	M	Wing punch	CSIRO
+1612004	LRFF	1612004_LRFF	14.12.2016	Charters	Qld	Australia	NA	-20.0734	146.261	412	Adult	M	Wing punch	CSIRO
+1612006	LRFF	1612006_LRFF	14.12.2016	Charters	Qld	Australia	NA	-20.0734	146.261	397	Adult	M	Wing punch	CSIRO
+1702001	LRFF	1702001_LRFF	17.02.2017	Regents Park	Qld	Australia	NA	-27.69	153.037		Adult		Wing punch	CSIRO
+1702002	LRFF	1702002_LRFF	17.02.2017	Regents Park	Qld	Australia	NA	-27.69	153.037		Adult		Wing punch	CSIRO
+1702004	LRFF	1702004_LRFF	17.02.2017	Regents Park	Qld	Australia	NA	-27.69	153.037		Adult		Wing punch	CSIRO
+1702005	BFF	1702005_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702006	BFF	1702006_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702007	BFF	1702007_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702008	BFF	1702008_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702009	BFF	1702009_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702012	BFF	1702012_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702013	BFF	1702013_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702014	BFF	1702014_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702016	BFF	1702016_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702017	BFF	1702017_BFF	19.02.2017	Wingham	NSW	Australia	E_COAST	-31.8696	152.381		Juv		Wing punch	CSIRO
+1702018	BFF	1702018_BFF	0/01/1900	Lismore	NSW	Australia	E_COAST	-28.8102	153.296		Adult		Wing punch	CSIRO
+1702019	BFF	1702019_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702020	BFF	1702020_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702021	LRFF	1702021_LRFF	0/01/1900	Casino	NSW	Australia	NA	-28.867	153.05		Adult		Wing punch	CSIRO
+1702022	BFF	1702022_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702023	LRFF	1702023_LRFF	0/01/1900	Casino	NSW	Australia	NA	-28.867	153.05		Adult		Wing punch	CSIRO
+1702024	BFF	1702024_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702025	LRFF	1702025_LRFF	0/01/1900	Casino	NSW	Australia	NA	-28.867	153.05		Adult		Wing punch	CSIRO
+1702026	BFF	1702026_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702027	BFF	1702027_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702028	BFF	1702028_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702029	BFF	1702029_BFF	0/01/1900	Casino	NSW	Australia	E_COAST	-28.867	153.05		Adult		Wing punch	CSIRO
+1702030	LRFF	1702030_LRFF	0/01/1900	Casino	NSW	Australia	NA	-28.867	153.05		Adult		Wing punch	CSIRO
+1702031	BFF	1702031_BFF	0/01/1900	Broome	WA	Australia	N_AUS	-17.9587	122.238		Adult		Wing punch	Broome bat carer
+1702032	LRFF	1702032_LRFF	0/01/1900	Broome	WA	Australia	NA	-17.9587	122.238		Adult		Wing punch	Broome bat carer
+1702033	LRFF	1702033_LRFF	0/01/1900	Broome	WA	Australia	NA	-17.9587	122.238		Adult		Wing punch	Broome bat carer
+1703018	BFF	1703018_BFF	10.03.2017	Kunanurra	WA	Australia	N_AUS	-15.7914	128.72		Adult		Wing punch	Broome bat carer
+1804002	BFF	1804002BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	206	Juv	F	Wing punch	CSIRO
+1804003	BFF	1804003BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	284	Juv		Wing punch	CSIRO
+1804004	BFF	1804004BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	521	Adult	M	Wing punch	CSIRO
+1804005	BFF	1804005BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	573	Adult	M	Wing punch	CSIRO
+1804006	BFF	1804006BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	599	Adult	M	Wing punch	CSIRO
+1804007	BFF	1804007BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	616	Adult	M	Wing punch	CSIRO
+1804008	BFF	1804008BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	543	Adult	M	Wing punch	CSIRO
+1804009	BFF	1804009BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	581	Adult	M	Wing punch	CSIRO
+1804010	BFF	1804010BFF	21.04.2018	Coen	Qld	Australia	NQ	-13.9427	143.201	379	Sub-adult	F	Wing punch	CSIRO
+1804011	BFF	1804011BFF	26.04.2018	Burketown	Qld	Australia	NQ	-17.7426	139.5458	360	Sub-adult	F	Wing punch	CSIRO
+1804013	BFF	1804013BFF	26.04.2018	Burketown	Qld	Australia	NQ	-17.7426	139.5458	390	Sub-adult	M	Wing punch	CSIRO
+1804014	BFF	1804014BFF	26.04.2018	Burketown	Qld	Australia	NQ	-17.7426	139.5458	453	Adult	M	Wing punch	CSIRO
+1804015	BFF	1804015BFF	26.04.2018	Burketown	Qld	Australia	NQ	-17.7426	139.5458	357	Sub-adult	M	Wing punch	CSIRO
+1804016	BFF	1804016BFF	26.04.2018	Burketown	Qld	Australia	NQ	-17.7426	139.5458	374	Sub-adult	F	Wing punch	CSIRO
+1804017	BFF	1804017BFF	26.04.2018	Burketown	Qld	Australia	NQ	-17.7426	139.5458	586	Adult	F	Wing punch	CSIRO
+1805001	BFF	1805001BFF	17.05.2018	Ingham	Wet tropics	Australia	NQ	-18.651	146.159		Adult	M	Wing punch	CSIRO
+1805002	BFF	1805002BFF	17.05.2018	Ingham	Wet tropics	Australia	NQ	-18.651	146.159		Adult	M	Wing punch	CSIRO
+1805003	BFF	1805003BFF	17.05.2018	Ingham	Wet tropics	Australia	NQ	-18.651	146.159		Adult	M	Wing punch	CSIRO
+1812001	LRFF	1812001LRFF	18.12.2018	Isa	Qld	Australia	NA	-20.7032	139.506	548	Adult	F	Wing punch	CSIRO
+1812002	LRFF	1812002LRFF	18.12.2018	Isa	Qld	Australia	NA	-20.7032	139.506	432	Adult	M	Wing punch	CSIRO
+1812003	LRFF	1812003LRFF	18.12.2018	Isa	Qld	Australia	NA	-20.7032	139.506	335	Sub-adult	F	Wing punch	CSIRO
+1812004	LRFF	1812004LRFF	18.12.2018	Isa	Qld	Australia	NA	-20.7032	139.506	344	Sub-adult	M	Wing punch	CSIRO
+1812005	LRFF	1812005LRFF	18.12.2018	Isa	Qld	Australia	NA	-20.7032	139.506	361	Sub-adult	M	Wing punch	CSIRO
+1812006	LRFF	1812006LRFF	18.12.2018	Isa	Qld	Australia	NA	-20.7032	139.506	345	Sub-adult	M	Wing punch	CSIRO
+1815076	BFF	1815076BFF_GHFF	08.02.2018	Ingham	Wet tropics	Australia	NQ	-18.651	146.159				Wing punch	CSIRO
+1815091	GHFF	1815091GHFF	08.02.2018	Ingham	Wet tropics	Australia	NA	-18.651	146.159				Wing punch	CSIRO
+1815092	SFF	1815092SFF	08.02.2018	Ingham	Wet tropics	Australia	Wet_tropics	-18.651	146.159				Wing punch	CSIRO
+1815093	BFF	1815093BFF_SFF	08.02.2018	Ingham	Wet tropics	Australia	NQ	-18.651	146.159				Wing punch	CSIRO
+1815094	SFF	1815094SFF	08.02.2018	Ingham	Wet tropics	Australia	Wet_tropics	-18.651	146.159				Wing punch	CSIRO
+1815095	SFF	1815095SFF	08.02.2018	Ingham	Wet tropics	Australia	Wet_tropics	-18.651	146.159				Wing punch	CSIRO
+1815096	SFF	1815096SFF	08.02.2018	Ingham	Wet tropics	Australia	Wet_tropics	-18.651	146.159				Wing punch	CSIRO
+2011003	LRFF	2011003_LRFF	20.11.2014	Tolga	Wet tropics	Australia	NA	-17.2315	145.48	362	Sub-adult	F	Wing punch	CSIRO
+2411005	SFF	2411005_SFF	24.11.2014	Goldsborough	Wet tropics	Australia	Wet_tropics	-17.1541	145.737	910	Adult	M	Wing punch	CSIRO
+2411007	SFF	2411007_SFF	24.11.2014	Goldsborough	Wet tropics	Australia	Wet_tropics	-17.1541	145.737	677	Adult	F	Wing punch	CSIRO
+2811016	SFF	2811016_SFF	28.11.2014	Goldsborough	Wet tropics	Australia	Wet_tropics	-17.1541	145.737	625	Adult	F	Wing punch	CSIRO
+2811017	SFF	2811017_SFF	28.11.2014	Goldsborough	Wet tropics	Australia	Wet_tropics	-17.1541	145.737	748	Adult	M	Wing punch	CSIRO
+37685	SFF	37685_SFF	19.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655		Adult	M	Wing punch	CSIRO
+37686	SFF	37686_SFF	19.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655		Adult	M	Wing punch	CSIRO
+37687	SFF	37687_SFF	19.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655		Adult	F	Wing punch	CSIRO
+37689	SFF	37689_SFF	19.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655		Adult	M	Wing punch	CSIRO
+37690	SFF	37690_SFF	20.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655		Adult	M	Wing punch	CSIRO
+37695	SFF	37695_SFF	22.09.2016	Madang	Madang	PNG	PNG	-5.2247	145.7932				Dried wing	CSIRO
+37697	SFF	37697_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	820	Adult	F	Wing punch	CSIRO
+37698	SFF	37698_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	510	Adult	F	Wing punch	CSIRO
+37699	SFF	37699_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	850	Adult	M	Wing punch	CSIRO
+37700	SFF	37700_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	600	Adult	F	Wing punch	CSIRO
+37701	SFF	37701_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	990	Adult	M	Wing punch	CSIRO
+37702	SFF	37702_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	650	Adult	F	Wing punch	CSIRO
+37703	SFF	37703_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	630	Adult		Wing punch	CSIRO
+37704	SFF	37704_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	540	Adult	F	Wing punch	CSIRO
+37705	SFF	37705_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	620	Adult		Wing punch	CSIRO
+37706	SFF	37706_SFF	23.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	1110	Adult	M	Wing punch	CSIRO
+37707	SFF	37707_SFF	24.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655			F	Wing punch	CSIRO
+37708	SFF	37708_SFF	24.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	940	Adult	M	Wing punch	CSIRO
+37710	SFF	37710_SFF	24.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	740	Adult	F	Wing punch	CSIRO
+37717	SFF	37717_SFF	25.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	860	Adult	M	Wing punch	CSIRO
+37721	SFF	37721_SFF	25.09.2016	Pt Moresby Botanical gardens	Pt Moresby	PNG	PNG	-9.4062	147.1655	990	Adult	M	Wing punch	CSIRO
+A138	GHFF	A138_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A141	GHFF	A141_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A142	GHFF	A142_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A54	GHFF	A54_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A56	GHFF	A56_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A57	GHFF	A57_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A58	GHFF	A58_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A59	GHFF	A59_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A60	GHFF	A60_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+A61	GHFF	A61_GHFF		Adelaide	Adelaide	Australia	NA	-34.9157	138.607		Adult		Wing punch	CSIRO
+DG01	LRFF	DG01_BFF		Townsville	Qld	Australia	NA	-19.3059	146.733			M	Wing punch	CSIRO
+DG02	BFF	DG02_BFF		Townsville	Qld	Australia	NQ	-19.3059	146.733			M	Wing punch	CSIRO
+DG03	LRFF	DG03_LRFF		Townsville	Qld	Australia	NA	-19.3059	146.733			M	Wing punch	CSIRO
+DG04	LRFF	DG04_BFF		Townsville	Qld	Australia	NA	-19.3059	146.733			M	Wing punch	CSIRO
+DG05	BFF	DG05_BFF		Townsville	Qld	Australia	NQ	-19.3059	146.733			F	Wing punch	CSIRO
+DG06	BFF	DG06_BFF		Townsville	Qld	Australia	NQ	-19.3059	146.733				Wing punch	CSIRO
+K17053010	BFF	K17053010BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K17053011	BFF	K17053011BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705302	BFF	K1705302BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705303	BFF	K1705303BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705304	BFF	K1705304BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705305	BFF	K1705305BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705306	BFF	K1705306BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705307	BFF	K1705307BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+K1705308	BFF	K1705308BFF	01.05.2017	Broome	WA	Australia	N_AUS	-17.9587	122.238				Kimberley Wildlife Rehab	CSIRO
+M30431	IBFF	M30431BFF	30.05.1989		Sumba	Indonesia	Outgroup	-9.4333	119.35	237	Juv	F		WA museum
+M30432	IBFF	M30432BFF	30.05.1989		Sumba	Indonesia	Outgroup	-9.4333	119.35	253	Juv	M		WA museum
+M30434	IBFF	M30434BFF	30.05.1989		Sumba	Indonesia	Outgroup	-9.4333	119.35	450	Sub-adult	M		WA museum
+M30435	BFF	M30435BFF	30.05.1989		Sumba	Indonesia	INDO	-9.4333	119.35	242	Juv	M		WA museum
+M30436	BFF	M30436BFF	30.05.1989		Sumba	Indonesia	INDO	-9.4333	119.35	213	Juv	M		WA museum
+M30437	BFF	M30437BFF	30.05.1989		Sumba	Indonesia	INDO	-9.4333	119.35	475	Adult	M		WA museum
+M30464	BFF	M30464BFF	31.05.1989		Sumba	Indonesia	INDO	-9.4333	119.35	190	Juv	M		WA museum
+M32949	BFF	M32949BFF	14.05.1990		Rinca	Indonesia	INDO	-8.65	119.6667	212	Juv	F		WA museum
+M33226	IBFF	M33226BFF	03.08.1990		Sulawesi	Indonesia	Outgroup	-5.4666	120.0667	870	Adult	M		WA museum
+M33228	BFF	M33228BFF	03.08.1990		Sulawesi	Indonesia	INDO	-5.4666	120.0667	700	Adult	M		WA museum
+M33229	IBFF	M33229BFF	03.08.1990		Sulawesi	Indonesia	Outgroup	-5.4666	120.0667	450	Sub-adult	M		WA museum
+M33231	IBFF	M33231BFF	03.08.1990		Sulawesi	Indonesia	Outgroup	-5.4666	120.0667	760	Adult	M		WA museum
+M33232	IBFF	M33232BFF	03.08.1990		Sulawesi	Indonesia	Outgroup	-5.4666	120.0667	700	Adult	M		WA museum
+M33233	IBFF	M33233BFF	03.08.1990		Sulawesi	Indonesia	Outgroup	-5.4666	120.0667	650	Adult	F		WA museum
+M35290	IBFF	M35290BFF	30.09.1990		Sawu	Indonesia	Outgroup	-10.4833	121.9167	495	Adult	F		WA museum
+M35291	BFF	M35291BFF	30.09.1990		Sawu	Indonesia	INDO	-10.4833	121.9167	210	Juv	F		WA museum
+M35292	BFF	M35292BFF	30.09.1990		Sawu	Indonesia	INDO	-10.4833	121.9167	520	Adult	F		WA museum
+M35293	BFF	M35293BFF	30.09.1990		Sawu	Indonesia	INDO	-10.4833	121.9167	255	Juv	M		WA museum
+M35294	BFF	M35294BFF	30.09.1990		Sawu	Indonesia	INDO	-10.4833	121.9167	350	Juv	M		WA museum
+M35296	BFF	M35296BFF	30.09.1990		Sawu	Indonesia	INDO	-10.4833	121.9167	450	Sub-adult	F		WA museum
+M35298	BFF	M35298BFF	30.09.1990		Sawu	Indonesia	INDO	-10.4833	121.9167	332	Juv	M		WA museum
+M53754	BFF	M53754BFF	00/11/1997		Kununurra	Australia	N_AUS	-15.7666	128.7333	605	Adult			WA museum
+M54659	BFF	M54659BFF	01.06.2003		Bigge Island	Australia	N_AUS	-14.5713	125.1567	452	Adult	M		WA museum
+M54660	BFF	M54660BFF	01.06.2003		Bigge Island	Australia	N_AUS	-14.5713	125.1567	455	Adult	M		WA museum
