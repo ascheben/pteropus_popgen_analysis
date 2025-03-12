@@ -1,4 +1,4 @@
-# Analysis of the population genetics of four flying fox species (Pteropus)
+# Analysis of the population genetics of four flying fox species (*Pteropus*)
 
 We investigate the population genomics of the highly mobile flying foxes *Pteropus alecto*, *P. conspicillatus*, *P. poliocephalus* and *P. scapulatus* across large parts of their overlapping ranges in Australia, Indonesia and New Guinea. Using reduced-representation resequencing and an array of population genetics analyses, we examine the extent to which panmixia, isolation-by-distance and hybridization shaped these populations. This repository supplements our manuscript by providing additional datasets and scripts used to generate our results and figures.
 
