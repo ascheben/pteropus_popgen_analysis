@@ -1,0 +1,45 @@
+library(ggrepel)
+library(reshape2)
+library(ggplot2)
+library(dplyr)
+library(colorspace)
+library(cowplot)
+library(triangulaR)
+library(vcfR)
+
+
+bffsff_vcf <- "1_SNP_Calling\\data\\bcftools.no_5bp_flanks.biallelic.whitelist.snps_mim09_biallelic_minDP5.bffsff_mm05_maf005.indepr03.no_alecto_alecto.vcf.gz"
+data <- read.vcfR(bffsff_vcf, verbose = F)
+bffsff_popfile <- read.csv("0_Metadata\\popmap_bffsff_big_groups.txt", header = FALSE, sep = "\t")
+colnames(bffsff_popfile) <- c("id","pop")
+# modify popfile to remove outgroups and merge species
+bffsff_popfile_sp <- bffsff_popfile %>% filter(pop!="INDO_outgroup") %>% mutate(pop=ifelse(pop=="Wet_tropics"| pop=="PNG","SFF","BFF"))
+
+# Create a new vcfR object composed only of sites above the given allele frequency difference threshold
+bffsff.diff75 <- alleleFreqDiff(vcfR = data, pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF", difference = 0.75)
+bffsff.diff8 <- alleleFreqDiff(vcfR = data, pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF", difference = 0.8)
+bffsff.diff85 <- alleleFreqDiff(vcfR = data, pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF", difference = 0.85)
+bffsff.diff9 <- alleleFreqDiff(vcfR = data, pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF", difference = 0.9)
+bffsff.diff95 <- alleleFreqDiff(vcfR = data, pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF", difference = 0.95)
+
+?alleleFreqDiff()
+hi.het75 <- hybridIndex(vcfR = bffsff.diff75,  pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF")
+hi.het8 <- hybridIndex(vcfR = bffsff.diff8,  pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF")
+hi.het85 <- hybridIndex(vcfR = bffsff.diff85,  pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF")
+hi.het9 <- hybridIndex(vcfR = bffsff.diff9,  pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF")
+hi.het95 <- hybridIndex(vcfR = bffsff.diff95,  pm = bffsff_popfile_sp, p1 = "BFF", p2 = "SFF")
+#cols <- c("#af8dc3", "#7fbf7b", "#bababa", "#878787", "#762a83", "#1b7837")
+#triangle.plot(hi.het, colors = cols)
+triangle.plot(hi.het75)
+triangle.plot(hi.het8)
+triangle.plot(hi.het85)
+triangle.plot(hi.het9)
+triangle.plot(hi.het95)
+
+# final
+triangle.plot(hi.het85,colors = c("#E495A5","#C29DDE"),ind.labels = T,alpha=0.75)
+ggsave("Triangle_plot_BFF_SFF_ggsave.pdf",width = 5,height=4)
+missing.plot(hi.het85)
+ggsave("Triangle_plot_BFF_SFF_missingness_ggsave.pdf",width = 5.5,height=4)
+
+
