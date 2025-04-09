@@ -2,9 +2,9 @@ library(pophelper)
 library(gridExtra)
 library(dplyr)
 
-inpath <- "C:\\Users\\Armin\\ws\\projects\\bat23\\analysis_2024\\3_SNP_Structure\\data\\structure\\"
-labels <- "C:\\Users\\Armin\\ws\\projects\\bat23\\analysis_2024\\3_SNP_Structure\\data\\structure\\bffsff_labels.txt"
-grplabels <- "C:\\Users\\Armin\\ws\\projects\\bat23\\analysis_2024\\0_Metadata\\popmap_bffsff_big_groups.txt"
+inpath <- "../data/structure/"
+labels <- "../data/structure/bffsff_labels.txt"
+grplabels <- "../../0_Metadata/data/palecto_pconspicillatus.popmap"
 
 
 lenK <- 15
@@ -13,7 +13,7 @@ shiny <- c("#1D72F5","#DF0101","#77CE61", "#FF9326","#A945FF","#0089B2","#FDF060
 
 
 #Add all files in directory to list
-sfiles <- list.files(path = inpath, pattern = "bffsff_out.*.meanQ$", full.names=TRUE)
+sfiles <- list.files(path = inpath, pattern = "structure_palecto_pconspicillatus_out.*.meanQ$", full.names=TRUE)
 
 #read files in from list and add individual labes from file
 #files can be modifief to show cultivar names
@@ -29,13 +29,11 @@ colnames(grouplabset) <-  c("name","region")
 inds$id  <- 1:nrow(inds)
 shared_labs <- merge(inds,grouplabset,by.x = c("V1"), by.y=c("name"),all.x = TRUE)
 shared_labs <- shared_labs[order(shared_labs$id), ]
-#species_country <- shared_labs[, c("species","country")] 
-#species <- as.data.frame(shared_labs[, c("species")])
-#names(species) <- c("species")
 
-p1 <- plotQ(slist[10],returnplot=T,exportplot=F,basesize=9,
-            linesize=0.8,pointsize=3,showindlab=T,useindlab = T,sortind = "all",clustercol=shiny)
-grid.arrange(p1$plot[[1]])
+
+#p1 <- plotQ(slist[10],returnplot=T,exportplot=F,basesize=9,
+#            linesize=0.8,pointsize=3,showindlab=T,useindlab = T,sortind = "all",clustercol=shiny)
+#grid.arrange(p1$plot[[1]])
 
 regions <- as.data.frame(shared_labs[, c("region")])
 p1 <- plotQ(slist[10],returnplot=T,exportplot=F,basesize=11,
@@ -49,7 +47,7 @@ p1 <- plotQ(slist[10],returnplot=T,exportplot=F,basesize=11,
             ordergrp=T,
             grplabsize=3.5,
             clustercol=shiny)
-grid.arrange(p1$plot[[1]])
-pdf("structure_bffsff_k4.pdf", width = 12, height = 5);    
+
+pdf("../figures/Admixture_barplot_faststructure_bff_sff_k4.pdf", width = 12, height = 5);    
 grid.arrange(p1$plot[[1]])
 dev.off()
