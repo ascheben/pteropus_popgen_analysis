@@ -61,8 +61,12 @@ We provide these input files for each population pair in the directory `5_Fastsi
 fastsimcoal2 -t pop1_pop2_m4_recent_migration_<rep_n>.tpl -e pop1_pop2_m4_recent_migration_<rep>.est -m -n 50000 -c 1 -B 1 -L 30 -s 0 -M -C 10
 ```
 
-By generating 100 replicates per scenario we ensure that the model fitting has converged to a robust set of parameters. For each model we then select the replicate with the highest maximum likelihood value. Because the models we are comparing contain different numbers of parameters and more parameters generally allows for a better fit, we must account for this when comparing the fits. Here we apply the widely used Akike Information Criterion as implemented in the scripts `scripts/calc_aic.R` to compare model fits.
+By generating 100 replicates per scenario we ensure that the model fitting has converged to a robust set of parameters. For each model we then select the replicate with the highest maximum likelihood value. Because the models we are comparing contain different numbers of parameters and more parameters generally allows for a better fit, we must account for this when comparing the fits. Here we apply the widely used Akike Information Criterion (AIC) to compare model fits.
 
+We calculate AIC in R as follows for each row in a dataframe `fsc2_df` of fastsimcoal2 results.
+```
+fsc2_df$AIC <- 2*fsc2_df$params-2*(fsc2_df$MaxEstLhood/log10(exp(1)))
+```
 
 ## Estimating demographic parameter confidence intervals using parametric bootstrapping
 
