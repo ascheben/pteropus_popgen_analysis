@@ -16,6 +16,6 @@ This repository is organized into subdirectories corresponding to independent pa
 
 ## Citation
 
->Scheben, A., McKeown, A., Walsh, T., Westcott, D.A., Metcalfe, S.S., Vanderduys, E.P., and Webber, B.L. Extreme mobility creates contrasting patterns of panmixia, isolation-by-distance and hybridization in four flying-fox species (*Pteropus*). *bioRxiv*. doi: *pending*.
+>Scheben, A., McKeown, A., Walsh, T., Westcott, D.A., Metcalfe, S.S., Vanderduys, E.P., and Webber, B.L. Extreme mobility creates contrasting patterns of panmixia, isolation-by-distance and hybridization in four flying-fox species (*Pteropus*). *bioRxiv*. doi: 10.1101/2025.04.06.647431.
 
 
