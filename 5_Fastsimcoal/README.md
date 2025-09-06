@@ -107,9 +107,9 @@ Once this step is complete, we concatenate all of the best parameter estimates i
 
 ```
 # Add the header
-find . -name "${BASENAME}*bestlhoods"| head -1| while read m; do head -1 $m  > ${BASENAME}.bootstraps.txt
+find . -name "${BASENAME}*bestlhoods"| head -1| while read m; do head -1 $m  > ${BASENAME}.bootstraps.txt;done
 # Add the point estimates for parameters
-find . -name "${BASENAME}*bestlhoods"| while read m; do tail -1 $m  >> ${BASENAME}.bootstraps.txt
+find . -name "${BASENAME}*bestlhoods"| while read m; do tail -1 $m  >> ${BASENAME}.bootstraps.txt;done
 # Calculate confidence intervals
 Rscript calc_CI.R ${BASENAME}.bootstraps.txt
 ```
