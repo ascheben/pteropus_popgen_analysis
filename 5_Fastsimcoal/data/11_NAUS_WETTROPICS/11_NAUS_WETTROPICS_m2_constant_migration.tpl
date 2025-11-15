@@ -4,8 +4,8 @@
 NPOP1
 NPOP2
 //Samples sizes and samples age
-18
-36
+26
+52
 //Growth rates: negative growth implies population expansion
 0
 0

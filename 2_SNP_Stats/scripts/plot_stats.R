@@ -61,9 +61,9 @@ ggsave("../figures/Nucleotide_diversity_all_species.pdf",height = 6,width = 11)
 
 ## Heterozygosity statistics
 
-hetstat <- merge(hetstat,bffsff_pop, by.x = "sample", by.y = "V1", all.x = TRUE)
+hetstat <- merge(hetstat,bffsff_pop, by.x = "Sample", by.y = "V1", all.x = TRUE)
 
-h1 <- ggplot(hetstat,aes(reorder(pop,het_frac),het_frac,fill="grey")) + 
+h1 <- ggplot(hetstat,aes(reorder(pop,Het_frac),het_frac,fill="grey")) + 
   geom_boxplot(outliers=FALSE,fill="grey",width=0.75)+
   #stat_summary(fun = "mean", geom = "point", shape = 2, size =2, color = "black")+
   theme_bw()+
@@ -71,7 +71,7 @@ h1 <- ggplot(hetstat,aes(reorder(pop,het_frac),het_frac,fill="grey")) +
   ylim(0.003,0.007)+
   theme(text = element_text(size=18),axis.text.x = element_text(angle = 45, vjust = 0.5))
 hetstat$V2 <- factor(hetstat$V2, levels = c("INDO_outgroup","BFF","SFF","LRFF","GHFF", "PNG","Wet_tropics","INDO","N_AUS","NQ","E_COAST"))
-h2 <- ggplot(hetstat[!is.na(hetstat$V2) & hetstat$V2!="INDO_outgroup",],aes(V2,het_frac,fill=pop)) +
+h2 <- ggplot(hetstat[!is.na(hetstat$V2) & hetstat$V2!="INDO_outgroup",],aes(V2,Het_frac,fill=pop)) +
   scale_fill_manual(values = c("lightblue","firebrick"))+
   geom_boxplot(outliers=FALSE,width=0.75)+
   xlab("")+
