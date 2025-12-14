@@ -19,4 +19,4 @@ TDIV 0 1 1 NANC 0 0 absoluteResize
 //Per chromosome: Number of contiguous linkage Block: a block is a set of contiguous loci
 1
 //per Block:data type, number of loci, per gen recomb and mut rates
-FREQ 1 0 2.5*e-8 OUTEXP
+FREQ 1 0 2.5e-8 OUTEXP
