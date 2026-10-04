@@ -1,4 +1,13 @@
-# Load necessary library
+# Calculate 95% confidence intervals for fastsimcoal2 parameters from parametric
+# bootstrap estimates.
+#
+# Usage: Rscript scripts/calc_CI.R <basename>.bootstraps.txt
+# Input:  tab-separated table, one row per bootstrap replicate (header from the
+#         .bestlhoods files), e.g. results/human_rate/bootstrap/*.bootstraps.txt
+# Output: <basename>.confidence_intervals.txt next to the input with, per parameter,
+#         the bootstrap mean, mean +/- 1.96 SE (lower_CI/upper_CI) and the 2.5%/97.5%
+#         quantiles (lower/upper_quantile_CI; the intervals reported in the manuscript).
+
 library(dplyr)
 
 # Function to calculate 95% confidence interval using mean and standard error
@@ -27,7 +36,7 @@ if (length(args) == 0) {
 file_path <- args[1]
 
 # Generate output file name
-output_file <- sub("\\..*$", ".confidence_intervals.txt", file_path)
+output_file <- sub("\\.bootstraps\\.txt$", ".confidence_intervals.txt", file_path)
 
 # Read the input file with a header
 data <- read.table(file_path, header = TRUE, sep = "\t", stringsAsFactors = FALSE)

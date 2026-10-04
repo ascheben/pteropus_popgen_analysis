@@ -1,118 +1,122 @@
 ## Inferring migration between populations using fastsimcoal2
 
-The coalescent simulator [fastsimcoal2](http://cmpg.unibe.ch/software/fastsimcoal2) was used to test four demographic models (isolation,constant migration,ancient migration,recent migration) for pairs of *P. alecto* and *P. conspicillatus* populations (PNG, INDO, NAUS, NQ, ECOAST, WET).
+We used the coalescent simulator [fastsimcoal2](http://cmpg.unibe.ch/software/fastsimcoal2) (v2.8) to compare four demographic models for pairs of *P. alecto* and *P. conspicillatus* genetic populations: strict isolation, constant migration, ancient migration and recent migration (manuscript Figure 2). Migration could be asymmetric. These analyses support Table 1, Tables S14–S16, Figure S16B, Figure S17 and Figure S18.
 
-## Preparing SNP data for fastsimcoal2
+### Directory layout
 
-The site frequency spectrum cannot easily be inferred from a SNP matrix with missing values. Because ddRAD-seq is prone to substantial levels of missing data, we maximized the number of segregating sites by using a down-projection approach implemented in [EasySFS](https://github.com/isaacovercast/easySFS). We used a a SNP set that had no MAF filter applied. All other filters were the same as for the SNP sets used for other analyses. However, the max-missing filter and the plink LD filter was reapplied to the population pair specific *P. alecto* and *P. conspicillatus* SNP sets that were used for constructing the site frequency spectrum. This ensures that there are no entirely missing SNPs for each population pair.
+```
+5_Fastsimcoal/
+├── pairs.tsv        # population pairs and haploid sample sizes (n0, n1) used in the .tpl files
+├── templates/       # model templates m1–m4 (.tpl with @N0@, @N1@, @MU@ placeholders)
+├── est/             # parameter search ranges (m3 and m4 share m3_m4_migration.est)
+├── sfs/             # observed joint SFS per pair (<pair>_jointMAFpop1_0.obs, from easySFS)
+├── scripts/
+│   ├── get_best_from_preview.sh  # choose easySFS projection
+│   ├── make_fsc_inputs.sh        # build .tpl/.est/.obs for all pairs x models for a mutation rate
+│   ├── aic.R                     # AIC model selection from results tables
+│   ├── calc_CI.R                 # bootstrap confidence intervals
+│   └── obs_vs_exp.R              # observed vs simulated 2D SFS (Figures S17, S18)
+├── data/<rate>_rate/best_replicates/   # fastsimcoal2 output of the best replicate per pair
+├── results/<rate>_rate/                # likelihoods, AIC tables and bootstrap results
+└── figures/                            # output of obs_vs_exp.R
+```
 
-The next step is to select projection values as follows:
+`<rate>` is `human` (2.5×10⁻⁸ per site per generation, the main results) or `mammal` (2.2×10⁻⁹ per site per year × 4-year generation time = 8.8×10⁻⁹ per site per generation, Table S16).
+
+### Population codes
+
+| File code | Manuscript code | Description |
+|---|---|---|
+| `BFFINDOplusWAmuseum` | INDO+3NWA | Indonesian *P. alecto* plus the three North West Australian museum samples (M53754, M54659, M54660) that cluster with them |
+| `BFFINDO` | INDO | Indonesian *P. alecto* only |
+| `BFFNAUS` | NWA+BURK | remaining North West Australian and all Burketown *P. alecto* |
+| `BFFEAST` | EA+NEA | East and North East Australian *P. alecto* |
+| `BFFAUS` | NWA+EA+NEA | all Australian *P. alecto* except the three samples above |
+| `SFF` | WTA+NG | *P. conspicillatus* (Wet Tropics Australia and New Guinea) |
+
+*P. alecto alecto* is not included. Pairs are named `<pop0>_<pop1>`. In the `.obs` files, columns (`d0_*`) are pop0 and rows (`d1_*`) are pop1; in the `.tpl`, the first sample size is pop0.
+
+### 1. Preparing the site frequency spectrum
+
+The SFS was built from SNPs filtered for depth, genotype quality, missingness and biallelic sites, with **no** MAF or LD filter (see `1_SNP_Calling`). Missing data were handled by down-projection with [easySFS](https://github.com/isaacovercast/easySFS). The max-missing filter was reapplied to each pair-specific VCF so that no SNP was entirely missing in either population. `popmap.txt` assigns samples to the two populations of the pair.
 
 ```
 easySFS.py -i pop1_pop2.vcf -p popmap.txt --preview -a > pop1_pop2.preview
+scripts/get_best_from_preview.sh pop1_pop2.preview   # prints the projection maximizing segregating sites per population
 ```
 
-A simple script can then parse the output files to select the downprojection that maximizes segregating sites. 
-```
-cat get_best_from_preview.sh
-grep -B 1 "(2" $1 | grep -v '(2'| grep -v "\-\-"
-grep "(2," $1| head -1| tr '\t' '\n'| sed 's/(//'| sed 's/)//'| sed 's/ //'| sed '/^$/d'| tr ',' '\t'| sort -n -k2,2|tail -1
-grep "(2," $1| tail -1| tr '\t' '\n'| sed 's/(//'| sed 's/)//'| sed 's/ //'| sed '/^$/d'| tr ',' '\t'| sort -n -k2,2| tail -1
-```
-
-This script can take the preview file as input and will print the recommended projection number as well as the number of sites to stdout.
+The total number of sites (variant + invariant) was counted from the pair-specific VCF that includes invariant sites:
 
 ```
-get_best_from_preview.sh pop1_pop2.preview
-pop1
-pop2
-26      33514
-18      34838
+zcat pop1_pop2_snps_withinvariant.vcf.gz | grep -v '^#' | wc -l
+easySFS.py -i pop1_pop2.vcf -p popmap.txt --proj <n_pop1>,<n_pop2> -a --total-length <n_sites> -o pop1_pop2_out
 ```
 
-Next, we need to calculate the total number of sites assessed to detect the SNPs used for inference of the site frequency spectrum, which easySFS refers to as the "total length". Knowing the number of monomorphic ('zero bin') sites is useful when fastsimcoal2 is going to be calibrated with just a mutation rate, which is what we will do here. For this reason, monomorphic sites were called together with polymorphic sites using bcftools in our initial variant calling.
+The resulting `*_jointMAFpop1_0.obs` files are in `sfs/`.
 
-The total number of sites can thus be easily counted for ach SNP set.
+### 2. Generating the fastsimcoal2 input files
 
-```
-zcat pop1_pop2_snps_withinvariant.vcf.gz| grep -v '^#'| wc -l 
-3162569
-```
-
-Finally, the projection sample number and the total length parameters can be used as inputs to calculate the joint site frequency spectrum.
+fastsimcoal2 needs a `.tpl`, a `.est` and an `.obs` file with the same prefix for each pair and model. All 48 input sets per mutation rate differ only in sample sizes and mutation rate, so they are generated from `templates/`, `est/`, `sfs/` and `pairs.tsv`:
 
 ```
-easySFS.py -i pop1_pop2.vcf -p popmap.txt --proj 26,18 -a --total-length 3162569 -o pop1_pop2_out
+cd 5_Fastsimcoal
+scripts/make_fsc_inputs.sh 2.5e-8 runs/human_rate
+scripts/make_fsc_inputs.sh 8.8e-9 runs/mammal_rate
 ```
 
-The output file with the suffix `jointMAFpop1_0.obs` is the site frequency spectrum that will be used for model fitting with fastsimcoal2.
+The generated files are identical to the input files used for the published runs.
 
-## Running fastsimcoal2 to find the best-fitting demographic model
+### 3. Running fastsimcoal2 and selecting the best model
 
-We require three input files for fastsimcoal2: 
-
-1. The joint site frequency spectrum file `.obs`
-2. A model template file `.tpl`
-3. An estimation file `.est`
-
-We provide these input files for each population pair in the directory `5_Fastsimcoal/data/`. Importantly, the template file contains the custom mutation rate used for calibrating the estimated parameters, in this case we use `2.5*e-8`. Now we execute fastsimcoal2 for 100 replicates per scenario. Note that for the command below the file `pop1_pop2_m4_recent_migration_<rep>_jointMAFpop1_0.obs` is expected in the same directory where the command is executed.
+Each pair × model was run as 100 independent replicates (note that replicate numbering can go over 100 because some replicates were rerun after failing due to excess runtime or memory usage). Each replicate was run in its own directory, with the `.tpl`, `.est` and `.obs` files renamed with a `_rep<N>` suffix:
 
 ```
-fastsimcoal2 -t pop1_pop2_m4_recent_migration_<rep_n>.tpl -e pop1_pop2_m4_recent_migration_<rep>.est -m -n 50000 -c 1 -B 1 -L 30 -s 0 -M -C 10
+fsc28 -t <pair>_<model>_rep<N>.tpl -e <pair>_<model>_rep<N>.est -m -n 50000 -c 1 -B 1 -L 30 -s 0 -M -C 10
 ```
 
-By generating 100 replicates per scenario we ensure that the model fitting has converged to a robust set of parameters. For each model we then select the replicate with the highest maximum likelihood value. Because the models we are comparing contain different numbers of parameters and more parameters generally allows for a better fit, we must account for this when comparing the fits. Here we apply the widely used Akike Information Criterion (AIC) to compare model fits.
-
-We calculate AIC in R as follows for each row in a dataframe `fsc2_df` of fastsimcoal2 results.
-```
-fsc2_df$AIC <- 2*fsc2_df$params-2*(fsc2_df$MaxEstLhood/log10(exp(1)))
-```
-
-## Estimating demographic parameter confidence intervals using parametric bootstrapping
-
-The point estimates for migration rates, effective population size, divergence time and other demographic parameters are more useful when combined with confidence intervals. For fastsimcoal2, it is recommended to calculate these using parametric bootstrapping. Here, we run 100 parametric bootstraps per sample and then calculate the 95% confidence interval.
-
-To simplify this step, we define a basename to run the bootstraps on, in this case the replicate of the best demographic model with the highest max likelihood.  
+For each pair × model, the replicate with the highest maximum composite likelihood (`MaxEstLhood` in `.bestlhoods`) was retained. These replicates are tabulated in `results/<rate>_rate/fastsimcoal2_bestlhoods_per_scenario_<rate>_mutation_rate.txt`. Models were then compared with AIC:
 
 ```
-BASENAME="<pop1_pop2>"
+cd scripts && Rscript aic.R   # writes results/<rate>_rate/model_selection_AIC_<rate>_mutation_rate.tsv
 ```
 
-Next, we prepare 100 replicate runs for 10,000 loci of length 100 each using the commands below.
+The fastsimcoal2 output for the best replicate of the best model per pair is in `data/<rate>_rate/best_replicates/`. For the human rate this includes `<rep>.bestlhoods`, `.pv`, `_maxL.par` and the expected SFS `_jointMAFpop1_0.txt`. For the mammal rate, only the initial `<rep>.par` is included.
+
+### 4. Parametric bootstrap confidence intervals
+
+For each best replicate (`BASENAME`, e.g. `BFFINDO_SFF_m4_recent_migration_rep102`), 100 SFS were simulated from the maximum-likelihood parameters, and parameters were re-estimated for each one:
 
 ```
-cp ../reps/${BASENAME}/${BASENAME}.pv ${BASENAME}.pv
-cat ../reps/${BASENAME}/${BASENAME}_maxL.par| sed 's/^1 0$/10000 0/'| sed 's/^FREQ 1/DNA 100/' > ${BASENAME}.par
-cp ../reps/${BASENAME}.est ${BASENAME}.est
-cp ../reps/${BASENAME}.tpl ${BASENAME}.tpl
-cp ../reps/${BASENAME}_jointMAFpop1_0.obs ${BASENAME}_jointMAFpop1_0.obs
+BASENAME=BFFINDO_SFF_m4_recent_migration_rep102
+REP=data/human_rate/best_replicates/${BASENAME}
+cp ${REP}/${BASENAME}.pv .
+sed 's/^1 0$/10000 0/; s/^FREQ 1/DNA 100/' ${REP}/${BASENAME}_maxL.par > ${BASENAME}.par
+fsc28 -i ${BASENAME}.par -n 100 -j -m -s0 -x -I -q     # simulates ${BASENAME}/${BASENAME}_{1..100}
 
-fastsimcoal2 -i ${BASENAME}.par -n 100 -j -m -s0 -x -I -q
-
-```
-
-Now we have to copy over our estimate, template and parameter values file to each replicate directory and rerun fastsimcoal2 passing the parameter values to `--initValues`. 
-
-```
-seq 1 100| while read m; do 
-    cp ${BASENAME}.est ${BASENAME}/${BASENAME}_$m 
-    cp ${BASENAME}.tpl ${BASENAME}/${BASENAME}_$m
-    cp ${BASENAME}.pv ${BASENAME}/${BASENAME}_$m
+# .tpl/.est for the best model, e.g. from scripts/make_fsc_inputs.sh, renamed to ${BASENAME}
+for m in $(seq 1 100); do
+    cp ${BASENAME}.est ${BASENAME}.tpl ${BASENAME}.pv ${BASENAME}/${BASENAME}_$m
     cd ${BASENAME}/${BASENAME}_$m
-    fastsimcoal2 -t ${BASENAME}.tpl -e ${BASENAME}.est --initValues ${BASENAME}.pv -m -n 50000 -c 1 -B 1 -L 30 -s 0 -M -C 10
+    fsc28 -t ${BASENAME}.tpl -e ${BASENAME}.est --initValues ${BASENAME}.pv -m -n 50000 -c 1 -B 1 -L 30 -s 0 -M -C 10
     cd ../..
-;done
-```
-Once this step is complete, we concatenate all of the best parameter estimates in the `.bestlhoods` output files and then calculate the 95% confidence intervals using a custom R script `scripts/calc_CI.R`.
+done
 
-```
-# Add the header
-find . -name "${BASENAME}*bestlhoods"| head -1| while read m; do head -1 $m  > ${BASENAME}.bootstraps.txt;done
-# Add the point estimates for parameters
-find . -name "${BASENAME}*bestlhoods"| while read m; do tail -1 $m  >> ${BASENAME}.bootstraps.txt;done
-# Calculate confidence intervals
-Rscript calc_CI.R ${BASENAME}.bootstraps.txt
+find . -name "${BASENAME}*bestlhoods" | head -1 | xargs head -1 > ${BASENAME}.bootstraps.txt
+find . -name "${BASENAME}*bestlhoods" | while read f; do tail -1 $f; done >> ${BASENAME}.bootstraps.txt
+Rscript scripts/calc_CI.R ${BASENAME}.bootstraps.txt   # writes ${BASENAME}.confidence_intervals.txt
 ```
 
-The R script generates an output file with the suffix `.confidence_intervals.txt`.
+The bootstrap estimates and confidence intervals for both mutation rates are in `results/<rate>_rate/bootstrap/`. The manuscript reports the quantile-based intervals (`lower_quantile_CI`, `upper_quantile_CI`). Times are in generations; multiply by 4 for years.
 
+### 5. Observed vs simulated SFS (Figures S17, S18)
+
+```
+cd scripts && Rscript obs_vs_exp.R
+```
+
+This writes `figures/2D_SFS_basic_plot_small.pdf` (Figure S17: the six Table 1 pairs) and `figures/2D_SFS_plot_big_poor_fit.pdf` (Figure S18: BFFAUS vs BFFINDOplusWAmuseum and vs BFFINDO). These figures are untidy and were edited with Inkscape for the manuscript.
+
+### Notes
+
+* An earlier version of this analysis used 15 pairs of the six geographic populations (PNG, INDO, NAUS, NQ, ECOAST, WETTROPICS). It has been replaced by the genetic-population pairs above, and its files remain in the git history.
+* The parameter counts in the `params` column are the values used for the published AIC comparison.
